@@ -34,17 +34,31 @@ jobs:
           fi
 
       - name: Sign Release APK
-        uses: r0adkll/sign-android-release@v1
-        id: sign_app
-        with:
-          releaseDirectory: app/build/outputs/apk/release
-          signingKeyBase64: ${{ secrets.KEYSTORE_BASE64 }}
-          alias: ${{ secrets.KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          tr -d '\r\n ' <<< "$KEYSTORE_BASE64" | base64 -d > release-key.jks
+          BUILD_TOOLS=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n 1)
+          
+          "$BUILD_TOOLS/zipalign" -p -f 4 \
+            app/build/outputs/apk/release/app-release-unsigned.apk \
+            app/build/outputs/apk/release/app-release-aligned.apk
+          
+          "$BUILD_TOOLS/apksigner" sign \
+            --ks release-key.jks \
+            --ks-key-alias "$KEY_ALIAS" \
+            --ks-pass env:KEYSTORE_PASSWORD \
+            --key-pass env:KEY_PASSWORD \
+            --out app/build/outputs/apk/release/app-release-signed.apk \
+            app/build/outputs/apk/release/app-release-aligned.apk
+          
+          rm -f release-key.jks
 
       - name: Upload Signed Release APK
         uses: actions/upload-artifact@v4
         with:
           name: app-release-signed
-          path: ${{ steps.sign_app.outputs.signedReleaseFile }}
+          path: app/build/outputs/apk/release/app-release-signed.apk
