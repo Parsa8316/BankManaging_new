@@ -60,5 +60,5 @@ jobs:
       - name: Upload Signed Release APK
         uses: actions/upload-artifact@v4
         with:
-          name: app-release-signed
+          name: bank-managing
           path: app/build/outputs/apk/release/app-release-signed.apk
