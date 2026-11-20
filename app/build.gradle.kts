@@ -18,27 +18,38 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    signingConfigs {
-        create("debugConfig") {
-            storeFile = file("${rootDir}/debug.keystore")
-            storePassword = "android"
-            keyAlias = "androiddebugkey"
-            keyPassword = "android"
-        }
+// ۱. کل بلوک signingConfigs را کامنت کنید:
+  /*
+  signingConfigs {
+    create("release") {
+      val keystorePath = System.getenv("KEYSTORE_PATH") ?: "${rootDir}/my-upload-key.jks"
+      storeFile = file(keystorePath)
+      storePassword = System.getenv("STORE_PASSWORD")
+      keyAlias = "upload"
+      keyPassword = System.getenv("KEY_PASSWORD")
     }
+    create("debugConfig") {
+      storeFile = file("${rootDir}/debug.keystore")
+      storePassword = "android"
+      keyAlias = "androiddebugkey"
+      keyPassword = "android"
+    }
+  }
+  */
 
-    buildTypes {
-        debug {
-            signingConfig = signingConfigs.getByName("debugConfig")
-        }
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
+  buildTypes {
+    release {
+      isCrunchPngs = false
+      isMinifyEnabled = false
+      proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+      // ۲. این خط را هم حتماً کامنت کنید (تا خطای release not found ندهد):
+      // signingConfig = signingConfigs.getByName("release")
     }
+    debug {
+      // ۳. این خط را هم کامنت کنید:
+      // signingConfig = signingConfigs.getByName("debugConfig")
+    }
+  }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
