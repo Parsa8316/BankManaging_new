@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">مدیریت بانک</string>
+
+    <!-- Navigation -->
+    <string name="nav_transactions">تراکنش‌ها</string>
+    <string name="nav_filter">فیلتر</string>
+    <string name="nav_settings">تنظیمات</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">مدیریت پیامک‌های بانکی</string>
+    <string name="dashboard_refresh">به‌روزرسانی پیامک‌ها</string>
+    <string name="dashboard_total_income">مجموع واریزی</string>
+    <string name="dashboard_total_outcome">مجموع برداشت</string>
+    <string name="dashboard_net_balance">تراز دوره</string>
+    <string name="dashboard_latest_balance">آخرین موجودی</string>
+    <string name="dashboard_currency_toman">تومان</string>
+    <string name="dashboard_currency_rial">ریال</string>
+    <string name="dashboard_search_hint">جستجو در متن، نوع یا نام بانک…</string>
+    <string name="dashboard_active_filters">فیلتر فعال</string>
+    <string name="dashboard_clear_filters">حذف فیلترها</string>
+    <string name="dashboard_transaction_count">%1$s تراکنش</string>
+    <string name="dashboard_empty_title">پیامک بانکی یافت نشد</string>
+    <string name="dashboard_empty_no_senders">هنوز شماره یا نام فرستنده بانکی ثبت نکرده‌اید. از بخش تنظیمات، فرستنده بانک خود را اضافه کنید.</string>
+    <string name="dashboard_empty_no_matches">هیچ پیامکی با تنظیمات یا فیلتر فعلی مطابقت ندارد.</string>
+    <string name="dashboard_go_to_settings">تنظیمات بانک‌ها و الگوها</string>
+    <string name="dashboard_test_parser">تحلیل سریع پیامک</string>
+
+    <!-- Permission -->
+    <string name="permission_sms_title">دسترسی به پیامک‌ها</string>
+    <string name="permission_sms_desc">برای خواندن خودکار تراکنش‌های بانکی از صندوق پیامک دستگاه، دسترسی خواندن پیامک مورد نیاز است. تمامی اطلاعات به‌صورت محلی روی گوشی شما پردازش می‌شود.</string>
+    <string name="permission_sms_grant">اعطای دسترسی پیامک</string>
+
+    <!-- Transaction Detail -->
+    <string name="detail_title">جزئیات تراکنش</string>
+    <string name="detail_bank">بانک</string>
+    <string name="detail_sender">فرستنده</string>
+    <string name="detail_type">نوع عملیات</string>
+    <string name="detail_date">تاریخ و ساعت</string>
+    <string name="detail_balance">موجودی پس از تراکنش</string>
+    <string name="detail_pattern">الگوی تشخیص‌دهنده</string>
+    <string name="detail_raw_sms">متن کامل پیامک</string>
+    <string name="detail_copy_sms">کپی متن پیامک</string>
+    <string name="detail_copied_toast">متن پیامک کپی شد</string>
+    <string name="detail_close">بستن</string>
+
+    <!-- Filter -->
+    <string name="filter_title">فیلتر پیشرفته پیامک‌ها</string>
+    <string name="filter_kind_section">نوع تراکنش</string>
+    <string name="filter_kind_income">دریافتی (واریز)</string>
+    <string name="filter_kind_outcome">خرجی (برداشت)</string>
+    <string name="filter_kind_other">سایر (رمز پویا و…)</string>
+    <string name="filter_types_section">عنوان عملیات</string>
+    <string name="filter_banks_section">بانک‌ها</string>
+    <string name="filter_amount_section">بازه مبلغ (تومان)</string>
+    <string name="filter_balance_section">بازه موجودی (تومان)</string>
+    <string name="filter_min_amount">حداقل مبلغ</string>
+    <string name="filter_max_amount">حداکثر مبلغ</string>
+    <string name="filter_min_balance">حداقل موجودی</string>
+    <string name="filter_max_balance">حداکثر موجودی</string>
+    <string name="filter_date_section">بازه تاریخ شمسی</string>
+    <string name="filter_from_date">از تاریخ</string>
+    <string name="filter_to_date">تا تاریخ</string>
+    <string name="filter_select_date">انتخاب تاریخ</string>
+    <string name="filter_description_section">جستجو در متن پیامک</string>
+    <string name="filter_description_hint">کلمه یا عبارت مورد نظر…</string>
+    <string name="filter_apply">اعمال فیلتر</string>
+    <string name="filter_reset">پاک کردن فیلترها</string>
+    <string name="filter_invalid_range">حداقل مقدار نمی‌تواند از حداکثر مقدار بزرگ‌تر باشد.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">تنظیمات و الگوها</string>
+    <string name="settings_tab_senders">فرستنده‌های بانکی</string>
+    <string name="settings_tab_patterns">الگوهای پیامکی</string>
+    <string name="settings_sender_hint">شماره یا نام فرستنده (مثلاً +982000 یا BluBank)</string>
+    <string name="settings_add_sender">افزودن فرستنده</string>
+    <string name="settings_senders_empty">هنوز فرستنده‌ای ثبت نشده است. شماره یا نام سرشماره پیامکی بانک خود را وارد کنید.</string>
+    <string name="settings_delete_sender_title">حذف فرستنده</string>
+    <string name="settings_delete_sender_confirm">آیا از حذف «%1$s» مطمئن هستید؟</string>
+    <string name="settings_confirm_yes">حذف</string>
+    <string name="settings_confirm_no">انصراف</string>
+    <string name="settings_appearance">ظاهر و نمایش</string>
+    <string name="settings_persian_digits">نمایش اعداد به فارسی</string>
+    <string name="settings_theme_system">خودکار سیستم</string>
+    <string name="settings_theme_light">روشن</string>
+    <string name="settings_theme_dark">تیره</string>
+
+    <!-- Custom SMS Patterns -->
+    <string name="patterns_intro">اگر قالب پیامک بانک شما با بلوبانک متفاوت است، الگوی اختصاصی آن را تعریف یا ویرایش کنید تا مبلغ، موجودی، نوع و تاریخ به‌دقت استخراج شود.</string>
+    <string name="patterns_add_new">افزودن الگوی جدید</string>
+    <string name="patterns_reset_defaults">بازگردانی الگوهای پیش‌فرض</string>
+    <string name="patterns_builtin_badge">پیش‌فرض</string>
+    <string name="patterns_custom_badge">سفارشی</string>
+    <string name="patterns_edit">ویرایش</string>
+    <string name="patterns_duplicate">کپی</string>
+    <string name="patterns_delete">حذف</string>
+    <string name="patterns_delete_confirm_title">حذف الگوی پیامکی</string>
+    <string name="patterns_delete_confirm_msg">آیا از حذف الگوی «%1$s» مطمئن هستید؟</string>
+
+    <!-- Pattern Editor -->
+    <string name="editor_title_new">الگوی پیامکی جدید</string>
+    <string name="editor_title_edit">ویرایش الگوی پیامکی</string>
+    <string name="editor_save">ذخیره الگو</string>
+    <string name="editor_back">بازگشت</string>
+    <string name="editor_section_identity">مشخصات الگو و شناسایی پیامک</string>
+    <string name="editor_pattern_name">نام الگو (مثلاً بانک پاسارگاد)</string>
+    <string name="editor_bank_display_name">نام نمایشی بانک (اختیاری)</string>
+    <string name="editor_sender_keywords">فرستنده‌های مرتبط (با ویرگول جدا کنید)</string>
+    <string name="editor_body_keywords">کلمات شناسه در متن پیامک (با ویرگول جدا کنید)</string>
+    <string name="editor_currency_unit">واحد پول در پیامک بانک</string>
+    <string name="editor_unit_rial">ریال (تبدیل خودکار به تومان)</string>
+    <string name="editor_unit_toman">تومان (بدون تبدیل)</string>
+    <string name="editor_section_classification">تشخیص واریز و برداشت</string>
+    <string name="editor_income_keywords">کلمات کلیدی واریز (دریافتی)</string>
+    <string name="editor_outcome_keywords">کلمات کلیدی برداشت (خرجی)</string>
+    <string name="editor_ignore_keywords">کلمات غیرتراکنشی (مثل رمز پویا)</string>
+    <string name="editor_section_amount">روش استخراج مبلغ</string>
+    <string name="editor_section_balance">روش استخراج موجودی</string>
+    <string name="editor_mode_auto">هوشمند با کلمه کلیدی</string>
+    <string name="editor_mode_line">بر اساس شماره خط</string>
+    <string name="editor_mode_regex">عبارت منظم (Regex)</string>
+    <string name="editor_line_number">شماره خط (شروع از ۱)</string>
+    <string name="editor_keywords_hint">کلمات کلیدی (با ویرگول جدا کنید)</string>
+    <string name="editor_regex_hint">الگوی Regex با گروه استخراج (مثلاً مبلغ[:\\s]+([\\d,]+))</string>
+    <string name="editor_section_extra">خطوط عنوان، نام بانک و تاریخ (اختیاری)</string>
+    <string name="editor_type_line">شماره خط نوع عملیات (۰ = تشخیص خودکار)</string>
+    <string name="editor_bank_line">شماره خط نام بانک (۰ = استفاده از نام نمایشی)</string>
+    <string name="editor_date_line">شماره خط تاریخ (۰ = تشخیص خودکار)</string>
+    <string name="editor_time_line">شماره خط ساعت (۰ = تشخیص خودکار)</string>
+    <string name="editor_section_tester">آزمایش زنده الگو</string>
+    <string name="editor_tester_hint">متن یک پیامک واقعی بانک خود را اینجا پیست کنید تا خروجی استخراج‌شده را بلافاصله ببینید…</string>
+    <string name="editor_tester_result">نتیجه استخراج زنده</string>
+    <string name="editor_error_name_required">لطفاً نام الگو را وارد کنید.</string>
+
+    <!-- Date Picker -->
+    <string name="datepicker_title">انتخاب تاریخ شمسی</string>
+    <string name="datepicker_confirm">تأیید</string>
+    <string name="datepicker_cancel">انصراف</string>
+    <string name="datepicker_clear">حذف تاریخ</string>
+    <string name="datepicker_today">امروز</string>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Minimalist bank vault / card + pulse icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,36 C28,32.69 30.69,30 34,30 L74,30 C77.31,30 80,32.69 80,36 L80,68 C80,71.31 77.31,74 74,74 L34,74 C30.69,74 28,71.31 28,68 Z" />
+    <path
+        android:fillColor="#1A4BFF"
+        android:pathData="M28,42 L80,42 L80,49 L28,49 Z" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M36,58 L50,58 C51.66,58 53,59.34 53,61 C53,62.66 51.66,64 50,64 L36,64 C34.34,64 33,62.66 33,61 C33,59.34 34.34,58 36,58 Z" />
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M65,57 A5,5 0 1,0 65,67 A5,5 0 1,0 65,57 Z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M71,57 A5,5 0 1,0 71,67 A5,5 0 1,0 71,57 Z" />
+</vector>

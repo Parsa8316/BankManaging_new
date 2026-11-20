@@ -1,0 +1,6 @@
+{
+  "name": "مدیریت بانک",
+  "description": "مدیریت هوشمند پیامک‌های بانکی با فیلتر پیشرفته، تاریخ شمسی و تعریف الگوهای سفارشی پیامک برای بانک‌های مختلف",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
